@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Lovers+Quarrel');
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.letter {
+  background: url('https://www.transparenttextures.com/patterns/old-mathematics.png');
+  background-size: cover;
+  padding: 30px;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.topic {
+  margin: 0;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 2.5em;
+  color: #ff6f61;
+  text-align: center;
+}
+
+.content {
+  margin: 20px 0;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #333;
+}
+
+.footer {
+  margin-top: 40px;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 1.5em;
+  color: #ff6f61;
+  text-align: center;
+}
+
+.heart {
+  margin: 20px auto;
+  background-color: pink;
+  height: 100px;
+  width: 100px;
+  transform: rotate(-45deg);
+  animation-name: beat;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.heart:after,
+.heart:before {
+  content: "";
+  background-color: pink;
+  border-radius: 50%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.heart:after {
+  top: 0;
+  left: 50px;
+}
+
+.heart:before {
+  top: -50px;
+  left: 0;
+}
+
+.heart:hover {
+  background-color: #ff6f61;
+  animation-duration: 200ms;
+  transform: scale(1.3) rotate(-45deg);
+}
+
+.heart:hover:before,
+.heart:hover:after {
+  background-color: #ff6f61;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+
+  50% {
+    transform: scale(0.8) rotate(-45deg);
+  }
+}
